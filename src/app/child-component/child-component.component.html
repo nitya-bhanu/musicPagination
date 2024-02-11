@@ -1,0 +1,14 @@
+<div>
+    <p>Hello Type Song Name Here: </p>
+    <form [formGroup]="songsSearchForm">
+        <label>Song Name</label>
+        <input placeholder="song name here" formControlName="songsName">
+    </form>
+</div>
+<div *ngFor="let item of songsDetail">
+    <ul>
+        <li (click)="alertSongDetails(item)">Artist Name: {{item.artistName}}</li>
+        <li>Song Name: {{item.songName}}</li>
+        <li>Release Year: {{item.releaseYear}}</li>
+    </ul>
+</div>
